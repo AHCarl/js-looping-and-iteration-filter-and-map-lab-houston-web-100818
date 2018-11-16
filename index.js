@@ -14,3 +14,11 @@ function exactMatch(driver, obj){
     return Object.values(d).includes(b[0]);
   })
 }
+
+function exactMatchToList(driver, obj) {
+  let match = driver.filter(function(d){ 
+    let b = Object.values(obj);
+    return Object.values(d).includes(b[0]);
+  })
+  return match.map( d => d.name)
+}
